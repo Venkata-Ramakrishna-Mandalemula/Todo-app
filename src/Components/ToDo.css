@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* section {
+  width: 100%;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.todo-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 3%;
+  background-image: linear-gradient(
+    50deg,
+    #012124,
+    #0a2e3a,
+    #0e4d62,
+    #2b748d,
+    #4893ac,
+    #93cbdf,
+    #bce9f9
+  );
+  color: white;
+  transition: 0.3s linear;
+  overflow: hidden;
+}
+
+.header,
+.form,
+.datetime {
+  margin: 0 1rem;
+  min-height: 10vh;
+  width: 100%;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 3rem;
+  min-height: 25vh;
+  width: 100%;
+}
+
+section h1 {
+  color: #060606;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.date-time {
+  font-size: 2rem;
+  text-align: center;
+  color: #001214;
+}
+
+form {
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0 3rem 0;
+  padding: 0.8rem;
+  width: 100%;
+  height: auto;
+}
+
+form input {
+  padding: 15px;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  max-width: 500px;
+  transition: background-color 200ms ease-in-out;
+  width: 100%;
+  background-color: #f2f3f4a6;
+  color: black;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+form input:hover {
+  cursor: text;
+}
+
+form input::placeholder {
+  color: rgb(11, 11, 11);
+  opacity: 0.4;
+  font-size: 1.2rem;
+  text-align: start;
+}
+
+button {
+  border: none;
+  outline: none;
+  transition: box-shadow 200ms ease, background-color 200ms ease-in-out;
+  background-color: #0f3e6d;
+  color: rgb(0, 0, 0);
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: #f1c40f;
+  color: #001214;
+}
+
+form button {
+  padding: 5px;
+  margin-left: 3rem;
+  font-size: 18px;
+  font-weight: 700;
+  height: 57px;
+  border-radius: 20px;
+  min-width: 100px;
+  background-color: #2555d8;
+  color: rgb(249, 246, 246);
+}
+
+span {
+  margin-right: 3rem;
+}
+
+.myUnOrdList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  font-family: 'Lato', sans-serif;
+}
+
+.todo-list {
+  min-width: 25%;
+
+  /* To remove the bullets of unordered list */
+  list-style: none;
+}
+
+.todo-item {
+  margin: 2.4rem;
+  /*word-wrap: break-word;
+    */ /*flex-wrap: wrap;
+    */
+  font-size: 25px;
+  color: #1c2833;
+  border-radius: 30px;
+  transition: background-color 200ms ease-in-out;
+  background-color: #80bbf6;
+  min-width: 35rem;
+  max-width: 30rem;
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 0.3fr;
+  justify-content: start;
+  gap: 1rem;
+  /*align-items: center;
+    */ /*wrapsthelinks*/
+  overflow-wrap: anywhere;
+}
+
+li span {
+  max-width: 15rem;
+  color: #1c2833;
+}
+
+.check-btn,
+.delete-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 80%;
+  margin: 0 20px;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+}
+
+.check-btn {
+  color: #fdfafa;
+  background-color: #176f3c;
+}
+
+.check-btn:hover {
+  background-color: #2cc16a;
+}
+
+.delete-btn {
+  color: #f7f3f3;
+  background-color: #9c2417;
+}
+
+.delete-btn:hover {
+  background-color: #eb3d29;
+}
+
+.checkList {
+  text-decoration: line-through;
+}
+
+.notCheckList {
+  text-decoration: none;
+}
+
+.clear-btn {
+  background-color: #fdfdfc;
+  color: red;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1rem 1rem;
+  margin: 1rem 0 2rem 0;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.clear-btn:hover {
+  background-color: #8d1407;
+  cursor: pointer;
+  color: white;
+}
